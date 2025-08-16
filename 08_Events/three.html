@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    // const date = function(str){
+    //     console.log(str,Date.now())
+    // }
+    // const interValid = setInterval(date,1000,"hi")
+
+    // clearInterval(interValid)
+
+    const date = function(){
+        console.log(Date.now().toLocaleString())
+    }
+
+
+    document.getElementById('start').addEventListener('click',function(e){
+        const IntervalId = setInterval(date,1000)
+    })
+
+
+    document.getElementById('stop').addEventListener('click',function(e){
+        clearInterval(IntervalId)
+    })
+
+
+</script>
+
+
+</html>
+

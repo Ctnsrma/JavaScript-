@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+    <script>
+        // adding list items 
+        // M1   -> in this method we have to traverse full document and append where it need, to optimise it we use M2.....
+
+        // function addLanguage(langName){
+        //     const li = document.createElement('li')
+        //     li.innerHTML = `${langName}`
+        //     document.querySelector('.language').appendChild(li)
+        // }
+        // addLanguage("Python")
+        // addLanguage("Java")
+        // addLanguage("GO ")
+        
+
+        // M2
+        function addOptiLanguage(langName){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptiLanguage("Cpp")
+        addOptiLanguage("Pyhton")
+        addOptiLanguage("Java")
+
+
+
+        // Edit 
+        // const secondLang = document.querySelector("li:nth-child(2)")
+        // // M1
+        // // secondLang.innerHTML = "MOJO"
+        // // M2
+        // const newli = document.createElement('li')
+        // newli.textContent = "Mojo"
+        // secondLang.replaceWith(newli)
+
+
+
+        // // remove
+        // const lastLang = document.querySelector("li:last-child")
+        // lastLang.remove()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</html>
